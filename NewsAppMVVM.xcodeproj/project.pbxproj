@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		000AA8AA22E8A68600ED3134 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000AA8A922E8A68600ED3134 /* CustomImageView.swift */; };
+		000AA8AC22E8B5D800ED3134 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000AA8AB22E8B5D800ED3134 /* Extension.swift */; };
 		00D40A2E22E8655100F93CD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D40A2D22E8655100F93CD8 /* AppDelegate.swift */; };
 		00D40A3322E8655100F93CD8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00D40A3122E8655100F93CD8 /* Main.storyboard */; };
 		00D40A3522E8655300F93CD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00D40A3422E8655300F93CD8 /* Assets.xcassets */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		000AA8A922E8A68600ED3134 /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
+		000AA8AB22E8B5D800ED3134 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		00D40A2A22E8655100F93CD8 /* NewsAppMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsAppMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00D40A2D22E8655100F93CD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00D40A3222E8655100F93CD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -47,6 +51,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		000AA8A822E8A66B00ED3134 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				000AA8A922E8A68600ED3134 /* CustomImageView.swift */,
+				000AA8AB22E8B5D800ED3134 /* Extension.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		00D40A2122E8655100F93CD8 = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +79,7 @@
 		00D40A2C22E8655100F93CD8 /* NewsAppMVVM */ = {
 			isa = PBXGroup;
 			children = (
+				000AA8A822E8A66B00ED3134 /* Helper */,
 				00D40A5022E879ED00F93CD8 /* Cell */,
 				00D40A4B22E8749A00F93CD8 /* ViewModels */,
 				00D40A4322E86F4E00F93CD8 /* Models */,
@@ -201,10 +215,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				000AA8AA22E8A68600ED3134 /* CustomImageView.swift in Sources */,
 				00D40A4122E8659200F93CD8 /* NewsTableViewController.swift in Sources */,
 				00D40A2E22E8655100F93CD8 /* AppDelegate.swift in Sources */,
 				00D40A4622E8704400F93CD8 /* Service.swift in Sources */,
 				00D40A4D22E874BF00F93CD8 /* ArticleViewModel.swift in Sources */,
+				000AA8AC22E8B5D800ED3134 /* Extension.swift in Sources */,
 				00D40A5222E87A1000F93CD8 /* ArticleTableViewCell.swift in Sources */,
 				00D40A4822E870A600F93CD8 /* Constant.swift in Sources */,
 				00D40A4A22E871A500F93CD8 /* Article.swift in Sources */,

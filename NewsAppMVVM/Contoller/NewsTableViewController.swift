@@ -13,14 +13,18 @@ class NewsTableViewController: UITableViewController {
     
     private var articleListVM: ArticleListViewModel!
     
+    private let spinner = UIActivityIndicatorView(style: .gray)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.addSubview(spinner)
+        spinner.center = view.center
         setup()
     }
 
     private func setup() {
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        
+        self.spinner.startAnimating()
         Service.shared.getData(urlString: URL_STRING) { articles,error  in
             
             if error != nil {
@@ -33,6 +37,7 @@ class NewsTableViewController: UITableViewController {
             self.articleListVM = ArticleListViewModel(articles: articles)
             DispatchQueue.main.async {
                 self.tableView.reloadData()
+                self.spinner.stopAnimating()
             }
         }
     }
@@ -61,6 +66,8 @@ class NewsTableViewController: UITableViewController {
         
         cell.titleLbl.text = articleVM.title
         cell.descriptionLbl.text = articleVM.description
+        cell.newsImage.downloadImageFromUrl(urlString: articleVM.urlToImage)
+
         
         return cell 
     }
