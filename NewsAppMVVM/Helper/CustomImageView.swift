@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+
+//Image cache implemented
 let imageCache = NSCache<AnyObject, AnyObject>()
 
 class CustomImageView: UIImageView {
@@ -31,7 +33,7 @@ class CustomImageView: UIImageView {
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             
             if error != nil {
-                print(error)
+                print(error as Any)
                 return
             }
             
