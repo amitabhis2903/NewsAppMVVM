@@ -90,6 +90,10 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="News" id="9vB-yp-IEs"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="L9C-yA-ZzO">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <attributedString key="attributedTitle"/>
+                    </refreshControl>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kVw-9A-VCv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

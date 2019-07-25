@@ -13,17 +13,30 @@ class NewsTableViewController: UITableViewController {
     
     private var articleListVM: ArticleListViewModel!
     
+    
     private let spinner = UIActivityIndicatorView(style: .gray)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(spinner)
         spinner.center = view.center
+        self.refreshControl?.tintColor = UIColor(red:0.25, green:0.72, blue:0.85, alpha:1.0)
+        self.refreshControl?.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
         setup()
+        navSetup()
     }
 
-    private func setup() {
+    @objc private func refresh() {
+        self.setup()
+        self.refreshControl?.endRefreshing()
+    }
+    
+    
+    private func navSetup() {
         self.navigationController?.navigationBar.prefersLargeTitles = true
+    }
+    
+    private func setup() {
         self.spinner.startAnimating()
         Service.shared.getData(urlString: URL_STRING) { articles,error  in
             
@@ -41,7 +54,6 @@ class NewsTableViewController: UITableViewController {
             }
         }
     }
-    
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return self.articleListVM == nil ? 0 : articleListVM.numberOfSection
